@@ -105,9 +105,9 @@ function combate(){
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     }
-    console.log()
-        revisarVidas('vidasJugador :'+vidasJugador);
-        revisarVidas('vidasEnemigo :'+vidasEnemigo);
+    console.log('vidasJugador :'+vidasJugador);
+    console.log('vidasEnemigo :'+vidasEnemigo);
+    revisarVidas();
 } 
 
 function revisarVidas() {
@@ -132,6 +132,7 @@ function crearMensaje(resultado) {
     sectionMensajes.innerHTML = resultado
     sectionAtaquesDelJugador.innerHTML = ataqueJugador
     sectionAtaquesDelEnemigo.innerHTML = ataqueEnemigo
+
     
 
     sectionAtaquesDelJugador.appendChild(nuevoAtaqueDelJugador);
@@ -142,8 +143,8 @@ function crearMensaje(resultado) {
 
 function crearMensajeFinal(resultadoFinal) {
     let sectionMensajes = document.getElementById("mensajes")
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = resultadoFinal
+    let parrafo = document.createElement("p");
+    parrafo.innerHTML = resultadoFinal;
     
 
     let botonFuego = document.getElementById("boton-fuego")
